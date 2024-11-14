@@ -65,7 +65,7 @@ Final Considerations
 
 
 
-Pre-requisites: 
+# Pre-requisites: 
 
 1. Software Libraries/Frameworks
 
