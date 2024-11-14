@@ -1,5 +1,6 @@
 For folders "pallet_data","runs" and "yolo_ros" click on the below link:
 https://drive.google.com/drive/folders/132RmYJ1xo8Qy5U0nE3AqljofeT7a717n?usp=sharing
+Video results can be found in the Google drive file.
 
 ### Go through Required Pre-requisites in the next section!!!
 
