@@ -1,3 +1,13 @@
+For folders "pallet_data","runs" and "yolo_ros" click on the below link:
+https://drive.google.com/drive/folders/132RmYJ1xo8Qy5U0nE3AqljofeT7a717n?usp=sharing
+
+### Go through Required Pre-requisites first!!!
+
+Create conda environment using this command:
+conda env create -f environment.yaml -n <environment_name>
+conda activate <environment_name>
+
+
 # Vision_Internship
 
 1. Dataset Acquisition and Annotation
