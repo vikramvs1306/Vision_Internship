@@ -63,4 +63,61 @@ Final Considerations
     Real-Time Adjustments: Consider further tuning TensorRT settings for latency-sensitive deployments.
     ROS2 Integration: Fine-tune ROS2 message publishing rates and topic configurations to match the real-time processing capacity of Jetson AGX Orin.
 
+
+
+Pre-requisites: 
+
+1. Software Libraries/Frameworks
+
+    Anaconda: A Python distribution for managing dependencies and environments.
+    Install from Anaconda.
+
+    PyTorch: Deep learning framework used for model training and inference.
+    Install from PyTorch.
+
+    TensorRT: NVIDIA's deep learning inference optimizer and runtime library.
+    Install following the instructions on the TensorRT website.
+
+    Ultralytics YOLO: The YOLO (You Only Look Once) object detection model implementation.
+    Install via pip:
+
+pip install ultralytics
+
+OpenCV: A library for computer vision tasks, such as image processing.
+Install using:
+
+    pip install opencv-python
+
+    ROS2 Foxy: A framework for building robot applications.
+    Install from the official ROS2 website.
+
+2. Dataset
+
+    Pallets Dataset: An open-source dataset containing images of pallets in various scenarios. Dataset link (as per the original context) for download or use.
+
+3. Development Environment
+
+    Anaconda Environment Setup: You will need to create a specific environment for the project:
+        Use the provided environment.yaml file:
+
+    conda env create -f environment.yaml -n <environment_name>
+    conda activate <environment_name>
+
+4. ROS2 Messages
+
+    Yolov8_msgs: Custom messages for the YOLO model inference results. This will be created as part of the ROS2 workspace. The ROS2 package should include:
+        InferenceResult: To represent the inference results.
+        Yolov8Inference: Message containing information about the inference output.
+
+5. Hardware Requirements
+
+    NVIDIA Jetson AGX Orin: The edge device for real-time inference and deployment.
+    Ensure that you have the appropriate software stack (CUDA, TensorRT, etc.) installed on this device.
+
+    Camera: A camera device (e.g., ZED2) to capture images for the detection model. ROS2 topics for image data will be used for feeding input to the model.
+
+6. Additional Tools
+
+    RViz2: A visualization tool for ROS2, used to visualize the detection and segmentation results in real-time. RViz2 can be launched and configured using ROS2 commands.
+
 This comprehensive setup should yield a reliable pallet detection system optimized for real-time, edge-device applications in dynamic industrial environments.
