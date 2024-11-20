@@ -130,5 +130,17 @@ Install using:
 6. Additional Tools
 
     RViz2: A visualization tool for ROS2, used to visualize the detection and segmentation results in real-time. RViz2 can be launched and configured using ROS2 commands.
+   This comprehensive setup should yield a reliable pallet detection system optimized for real-time, edge-device applications in dynamic industrial environments.
 
-This comprehensive setup should yield a reliable pallet detection system optimized for real-time, edge-device applications in dynamic industrial environments.
+
+https://github.com/user-attachments/assets/1ed17926-7924-4197-b4a6-253fd1bd4832
+
+
+https://github.com/user-attachments/assets/43964d06-7fee-4a3b-b3b6-c333aabdf6be
+
+
+
+
+
+
+
