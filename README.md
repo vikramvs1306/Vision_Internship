@@ -4,7 +4,7 @@ Video results can be found in the Google drive file.
 
 ### Go through Required Pre-requisites in the next section!!!
 
-Create conda environment using this command:
+Create conda environment using this command:/n
 conda env create -f environment.yaml -n <environment_name>
 conda activate <environment_name>
 
