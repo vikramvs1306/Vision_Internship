@@ -180,5 +180,13 @@ Once rviz opens click on "Add" and click on "By topic" and under "inference_resu
 ### Final Video Results
 https://github.com/user-attachments/assets/aa1591db-12ea-46aa-8844-e512ec497d9b
 
+### RT-DETR A Vision Transformer based real time Object Detection on custom dataset for Pallet and Ground Detection.
+
+- Go through the file pallet_final_rt_detr.ipynb file through the implementation and results on the data.
+- Below is the result of the camera data image.
+
+  You can see Pallets with 0.50 and 0.32 confidence and ground with 0.86 and 0.51 confidence 
+
+  ![Screenshot from 2024-11-20 15-29-21](https://github.com/user-attachments/assets/2693fc91-ea8b-41de-8b96-bdd10f1dc25a)
 
 
