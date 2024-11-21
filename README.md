@@ -177,8 +177,8 @@ And open another terminal and source ros and run this command:
 rviz2
 Once rviz opens click on "Add" and click on "By topic" and under "inference_results" click "Image". You will see the bounding box and segmentation on Pallets and Ground. 
 
-
-
+### Final Video Results
+https://github.com/user-attachments/assets/aa1591db-12ea-46aa-8844-e512ec497d9b
 
 
 
