@@ -182,7 +182,7 @@ https://github.com/user-attachments/assets/aa1591db-12ea-46aa-8844-e512ec497d9b
 
 ### RT-DETR A Vision Transformer based real time Object Detection on custom dataset for Pallet and Ground Detection.
 
-- Go through the file pallet_final_rt_detr.ipynb file through the implementation and results on the data.
+- Go through the file pallet_final_rt_detr.ipynb for the implementation and results on the data.
 - Below is the result of the camera data image.
 
   You can see Pallets with 0.50 and 0.32 confidence and ground with 0.86 and 0.51 confidence 
