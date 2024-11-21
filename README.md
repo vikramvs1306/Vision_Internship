@@ -4,9 +4,11 @@ Video results can be found in the Google drive file.
 
 ### Go through Required Pre-requisites in the next section!!!
 
-Create conda environment using this command:/n
-conda env create -f environment.yaml -n <environment_name>
-conda activate <environment_name>
+Create conda environment using this command:
+
+- conda env create -f environment.yaml -n <environment_name>
+
+- conda activate <environment_name>
 
 
 # Vision_Internship
@@ -63,7 +65,7 @@ Developing a ROS2 node allows you to integrate the model for real-time detection
 Inference Visualization:
 
     Launch the model using ros2 launch yolobot_recognition launch_yolov8.launch.py.
-    Visualize the results in rviz2 under the inference_result topic.
+    Visualize the results in rviz2 under the inference_result Image topic.
 
 Key Code Insights
 
@@ -132,12 +134,48 @@ Install using:
     RViz2: A visualization tool for ROS2, used to visualize the detection and segmentation results in real-time. RViz2 can be launched and configured using ROS2 commands.
    This comprehensive setup should yield a reliable pallet detection system optimized for real-time, edge-device applications in dynamic industrial environments.
 
+### Video Results
 
 https://github.com/user-attachments/assets/1ed17926-7924-4197-b4a6-253fd1bd4832
 
 
 https://github.com/user-attachments/assets/43964d06-7fee-4a3b-b3b6-c333aabdf6be
 
+
+### Testing the model on real camera data (ROS2 bag file)
+
+#### Pre-requisites:
+sudo apt-get install ros-foxy-ros2bag \
+                     ros-foxy-rosbag2-converter-default-plugins \
+                     ros-foxy-rosbag2-storage-default-plugins
+
+
+First step is to read the ros2 bag file using the following command:
+- ros2 bag play /home/vikram/ros2_ws/src/yolobot_recognition/scripts/internship_assignment_sample_bag_0.db3  --loop
+  
+Once you run the above command, the topics are being published. To check what topics are being published. Open a new tab and run the below command.
+
+- ros2 topic list
+The output will be
+/robot1/zed2i/left/camera_info
+/robot1/zed2i/left/image_rect_color
+
+Now we have to modify the code in this python file :
+yolov11_ros2_pt.py
+
+self.subscription = self.create_subscription(
+            Image,
+            '/robot1/zed2i/left/image_rect_color',  -----> Enter the full topic name here
+            self.camera_callback,
+            10)
+Once you make this change save it and build your workspace and source it. 
+
+And then run this command:
+ros2 launch yolobot_recognition launch_yolov8.launch.py
+
+And open another terminal and source ros and run this command:
+rviz2
+Once rviz opens click on "Add" and click on "By topic" and under "inference_results" click "Image". You will see the bounding box and segmentation on Pallets and Ground. 
 
 
 
